@@ -18,7 +18,7 @@ namespace CleanArch.Application.Services
         public CourseService(ICourseRepository courseRepository, IMediatorHandler bus)
         {
             _courseRepository = courseRepository;
-            _bus = _bus;    
+            _bus = bus;    
         }
 
         public void Create(CourseViewModel courseViewModel)
