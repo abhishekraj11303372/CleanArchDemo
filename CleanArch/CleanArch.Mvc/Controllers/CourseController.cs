@@ -22,8 +22,11 @@ namespace CleanArch.Mvc.Controllers
         //Get : /cpntroller/
         public IActionResult Index()
         {
-            CourseViewModel model = _courseService.GetCourses();
-            return View(model);
+            //CourseViewModel model = _courseService.GetCourses();
+            //return View(model);
+
+            //after removing IEnumerable<Course> Courses {get;set;} from ViewModels
+            return View(_courseService.GetCourses());
         }
     }
 }
